@@ -1,84 +1,46 @@
-﻿//Задан массив, содержащий 20 целых чисел в диапазоне от -20 до 20.
-        // Найти сумму элементов этого массива с нечетными номерами.
-        /*final int size = 20;
-        int [] arr = new int[size];
+﻿//array 22 Дан массив размера н и целые числа к и л (0<= k <= l <= n-1) Найти сумму всех элементов
+        // массива кроме элементов с номерами от к до л включительно
+        Scanner in = new Scanner(System.in);
+        int n = 20;
+        int arr[] = new int[n];
         int sum = 0;
-        for (int i = 0; i<size; i++){
-        arr[i] =(int)(Math.random()*41)-20;
+        int v =0;
+        for (int i =1; i<n; i++) {
+            arr[i] = (int)(Math.random()*21);
             System.out.print(arr[i] + " ");
         }
-        for(int i = 0; i<size; i++) {
-            if(arr[i]<0) {
-                sum = sum + arr[i];
-            }
-        }
-        System.out.println("\nsuma: " + sum);
-
-        //Задан массив, который содержит 15 целых чисел в диапазоне от -60 до 60.
-        // Найти произведение отрицательных элементов массива
-        final int size = 15;
-        int[] arr = new int[size];
-        int ilocz = 1;
-        for (int i = 0; i<size; i++) {
-            arr[i]=(int)(Math.random()*121) - 60;
-            System.out.print(arr[i] + " ");
-        }
-        for (int i = 0; i<size; i++) {
-            if(arr[i]<0) {
-                ilocz=ilocz*arr[i];
-            }
-        }
-        System.out.println("\niloczyn: " + ilocz);
-        //Задан массив A, содержащий 10 целых чисел. Найти сумму элементов этого массива
-        final int a = 10;
-        int[] arr = new int[a];
-        int sum = 0;
-        for(int i = 0; i<a; i++) {
-            arr[i]=(int)(Math.random()*11);
-            System.out.print(arr[i] + " ");
-        }
-        for(int i = 0; i<a; i++){
-            sum = sum + arr[i];
-        }
-        System.out.println("\n suma: " + sum);
-
-        //Задан массив, который содержит 8 целых чисел. Найти сумму положительных элементов массива.
-        final int size = 8;
-        int[] arr = new int[size];
-        int sum = 0;
-        for(int i = 0;i<size; i++) {
-            arr[i] = (int)(Math.random()*9);
-            System.out.print(arr[i] + " ");
-        }
-        for(int i = 0;i<size; i++){
+        int k = in.nextInt();
+        int l = in.nextInt();
+        for(int i=0; i<=k; i++){
             sum+=arr[i];
         }
-        System.out.println("\nsuma: " + sum);
-        //Задан массив, который содержит 6 целых чисел. Найти количество элементов массива, которые делятся на 3.
-        final int size = 6;
-        int[] arr = new int[size];
-        for (int i = 0; i<size; i++) {
-            arr[i] = (int)(Math.random()*7);
+        for (int i = l; i<=n-1;i++){
+           v += arr[i];
+        }
+        int c = v +sum;
+        System.out.println("suma: " + c ); */
+        //23 Дан массив размера н и целые числа к и л (0<= k <= l <= n-1) Найти среднее арефметическое в всех элементов
+        // массива кроме элементов с номерами от к до л включительно
+        Scanner in = new Scanner(System.in);
+        int n = 10;
+        int arr[] = new int[n];
+        int sum = 0;
+        int v =0;
+        double q = 0;
+        for (int i =1; i<n; i++) {
+            arr[i] = (int)(Math.random()*11);
             System.out.print(arr[i] + " ");
         }
-        for(int i =0; i<size; i++) {
-            if(arr[i]%3==0) {
-                System.out.println("kol-vo" + arr[i]);
-            }
-        } */
-        //Задан массив из 9 целых чисел. Найти произведение элементов массива, которые являются нечетными числами
-        final int size = 9;
-        int[] arr = new int[size];
-        int ilocz = 1;
-        for(int i = 0; i<size; i++) {
-            arr[i] = (int)(Math.random()*10)-9;
-            System.out.print(arr[i] + " ");
+        int k = in.nextInt();
+        int l = in.nextInt();
+        for(int i=0; i<=k; i++){
+            sum+=arr[i];
+            q++;
         }
-        for (int i = 0; i<size; i++) {
-            if (arr[i]<0) {
-                ilocz = ilocz * arr[i];
-            }
+        for (int i = l; i<=n-1;i++){
+            v += arr[i];
+            q++;
         }
-        System.out.println(ilocz);
-    }
-}
+        double c = (v +sum)/q;
+        System.out.println("srednee " + c );  
+//буду рада если обьясните что я сделал не так
