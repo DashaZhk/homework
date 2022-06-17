@@ -54,7 +54,7 @@
                 pos1 = i;
             }
         }
-        System.out.println("pos min: " + pos1 + " pos max: " + pos2);
+        System.out.println("pos max: " + pos2 + " pos min: " + pos1);
 
         //8 Дано целое число N и набор из N целых чисел. Найти номера пер-
         //вого и последнего минимального элемента из данного набора и вывести
@@ -111,6 +111,6 @@
                 pos1 = i;
             }
         }
-        System.out.println("max1: " + max + ", pos1: " + pos + ", max2: " + max1 + ", pos2: " + pos1); 
+        System.out.println("max1: " + max + ", pos1: " + pos + ", max2: " + max1 + ", pos2: " + pos1);
     }
 }
