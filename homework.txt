@@ -1,116 +1,23 @@
-﻿//6Дано целое число N и набор из N целых чисел. Найти номера
-        //первого минимального и последнего максимального элемента из данного
-        //набора и вывести их в указанном порядке.
+﻿ArrayList<Integer> deck = new ArrayList<>();
+        int r = 52;
+        for (int x = 0; x < 4; x++) {
+            for (int i = 1; i <= 10; i++) {
+                deck.add(i);
+            }
+                deck.add(10);
+                deck.add(10);
+                deck.add(10);
+            }
+        System.out.println(deck);
 
-        int n = 10;
-        int arr[] = new int[n];
-        for (int i = 0; i<n; i++) {
-            arr[i] = (int)(Math.random()*10)+1;
-            System.out.print(arr[i] + " ");
-        }
         System.out.println();
-        int pos1 = 0;
-        int pos2 = 0;
-
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-
-        for (int i = 0; i<n; i++){
-            if (arr[i]<min){
-                min = arr[i];
-                pos1 = i;
-            }
+        int index = 0;
+        for(int i = 0; i<r; i++){
+            index = (int)(Math.random()*52);
+            int a = deck.get(index);
+            deck.set(index, deck.get(i));
+            deck.set(i, a);
         }
-        for (int i = n-1; i>=0; i--) {
-            if (arr[i] > max) {
-                max = arr[i];
-                pos2 = i;
-            }
+        for(int i = 0; i<r; i++){
+            System.out.print(deck.get(i)+ " ");
         }
-        System.out.println("pos min: " + pos1 + " pos max: " + pos2);
-        //7
-        int n = 15;
-        int arr[] = new int[n];
-        for (int i = 0; i<n; i++) {
-            arr[i] = (int)(Math.random()*15)+1;
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-        int pos1 = 0;
-        int pos2 = 0;
-
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-
-        for (int i = 0; i<n; i++){
-            if (arr[i]>max){
-                max = arr[i];
-                pos2 = i;
-            }
-        }
-        for (int i = n-1; i>=0; i--) {
-            if (arr[i] < min) {
-                min = arr[i];
-                pos1 = i;
-            }
-        }
-        System.out.println("pos max: " + pos2 + " pos min: " + pos1);
-
-        //8 Дано целое число N и набор из N целых чисел. Найти номера пер-
-        //вого и последнего минимального элемента из данного набора и вывести
-        //их в указанном порядке.
-
-        int n = 10;
-        int arr[] = new int[n];
-        for (int i = 0; i<n; i++){
-            arr[i]=(int)(Math.random()*10)+1;
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-        int min = Integer.MAX_VALUE;
-        int min1 = Integer.MAX_VALUE;
-        int pos = 0;
-        int pos1 = 0;
-        for (int i = 0; i<n; i++){
-            if(arr[i] < min){
-                min = arr[i];
-                pos = i;
-            }
-        }
-        for (int i = n-1; i>=0; i--){
-            if (arr[i]<min1){
-                min1 = arr[i];
-                pos1 = i;
-            }
-        }
-        System.out.println("min1: " + min + ", pos1: " + pos + ", min2: " + min1 + ", pos2: " + pos1); */
-        //9 Дано целое число N и набор из N целых чисел. Найти номера пер-
-        //вого и последнего максимального элемента из данного набора и вывести
-        //их в указанном порядке.
-
-        int n = 20;
-        int arr[] = new int[n];
-        for (int i = 0; i<n; i++){
-            arr[i]=(int)(Math.random()*20)+1;
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-        int max = Integer.MIN_VALUE;
-        int max1 = Integer.MIN_VALUE;
-        int pos = 0;
-        int pos1 = 0;
-        for (int i = 0; i<n; i++){
-            if(arr[i] > max){
-                max = arr[i];
-                pos = i;
-            }
-        }
-        for (int i = n-1; i>=0; i--){
-            if (arr[i] > max1){
-                max1 = arr[i];
-                pos1 = i;
-            }
-        }
-        System.out.println("max1: " + max + ", pos1: " + pos + ", max2: " + max1 + ", pos2: " + pos1);
-    }
-}
